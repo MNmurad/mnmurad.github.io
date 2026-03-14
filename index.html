@@ -1,29 +1,214 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First HTML Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: left;
-            margin: 50px;
-        }
-        h1 {
-            color: navy;
-        }
-        p {
-            font-size: 18px;
-            margin: 5px 0;
-        }
-    </style>
+    <title>Md Mahmuddun Nabi Murad | AI and Machine Learning Researcher</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Bitter:wght@500;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <img src="https://avatars.githubusercontent.com/u/38746564?s=400&u=fd72411963cdc0d38f7d95a8d135206826e03ba6&v=4" alt="Profile Picture" width="200" style="display: block; margin-bottom: 10px;">
-    <h1>About Me</h1>
-    <p><b>Md Mahmuddun Nabi Murad</b></p>
-    <p>PhD student, University of South Florida, Tampa, USA</p>
-    <p>Email: <a href="mailto:mmurad@usf.edu">mmurad@usf.edu</a></p>
+    <nav>
+        <div class="nav-shell">
+            <div class="brand">MNM.MURAD</div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#research">Research</a>
+                <a href="#experience">Experience</a>
+                <a href="#awards">Awards</a>
+                <a href="#publications">Publications</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="container">
+        <div class="hero">
+            <img src="assets/profile.jpg" alt="Md Mahmuddun Nabi Murad" class="hero-img">
+            <div>
+                <p class="hero-eyebrow">PhD Researcher | University of South Florida</p>
+                <h1>Md Mahmuddun Nabi Murad</h1>
+                <p>I build practical deep learning systems for long-horizon time-series forecasting, anomaly detection, and intelligent infrastructure with a focus on efficient model design.</p>
+                <div class="hero-actions">
+                    <a href="assets/Murad_CV.pdf" target="_blank" class="btn btn-primary"><i class="fas fa-file-pdf"></i> View CV</a>
+                    <a href="#research" class="btn btn-ghost"><i class="fas fa-microscope"></i> Explore Research</a>
+                </div>
+                <div class="social">
+                    <a href="mailto:mmurad@usf.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://linkedin.com/in/md-mahmuddun-nabi-murad/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/MNmurad" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="container">
+            <p class="section-kicker">Professional Summary</p>
+            <h2 class="section-title">Researching data-centric AI for real-world systems</h2>
+            <div class="about-grid">
+                <article class="panel">
+                    <p class="about-text">Machine Learning Researcher focused on advanced neural architectures such as Transformers, MLP-Mixers, and Graph Neural Networks. My work targets state-of-the-art performance for sequential learning, long-term forecasting, and robust anomaly detection under real operational constraints.</p>
+                </article>
+                <aside class="panel">
+                    <div class="chip-cloud">
+                        <span class="chip">Time-Series Analysis</span>
+                        <span class="chip">Anomaly Detection</span>
+                        <span class="chip">Sequential Data</span>
+                        <span class="chip">Deep Learning</span>
+                        <span class="chip">PyTorch</span>
+                        <span class="chip">TensorFlow</span>
+                        <span class="chip">Python</span>
+                        <span class="chip">Signal Processing</span>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section id="research" class="container">
+            <p class="section-kicker">Research and Publications</p>
+            <h2 class="section-title">Flagship Projects</h2>
+            <div class="research-grid">
+                <article class="card">
+                    <a href="assets/WPMixer_AAAI25_Poster.pdf" target="_blank" class="card-media" title="View conference poster">
+                        <img src="assets/wpmixer-thumb.jpg" alt="WPMixer poster thumbnail">
+                        <span class="tag">AAAI 2025</span>
+                    </a>
+                    <div class="card-body">
+                        <h3>WPMixer: Efficient Multi-Resolution Mixing for Long-Term Time Series Forecasting</h3>
+                        <p>An MLP-mixer-based model that beats several Transformer variants in both forecasting quality and computational efficiency.</p>
+                        <div class="link-row">
+                            <a href="https://arxiv.org/abs/2412.17176" class="text-link"><i class="fas fa-arrow-up-right-from-square"></i> arXiv</a>
+                            <a href="https://github.com/Secure-and-Intelligent-Systems-Lab/WPMixer" class="text-link"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <a href="https://www.youtube.com/watch?v=CgXx3Pa-xzY" target="_blank" class="card-media" title="Watch project demo">
+                        <img src="https://img.youtube.com/vi/CgXx3Pa-xzY/maxresdefault.jpg" alt="Causal MLP-Mixer video thumbnail">
+                        <span class="tag">Research Project</span>
+                    </a>
+                    <div class="card-body">
+                        <h3>Vessel Route Prediction using Web-stream Video of a Maritime Environment</h3>
+                        <p>We develop a novel model that can predict vessel routes using both AIS and non-AIS data. Non-AIS data is obtained from web-stream video feeds of maritime environments.</p>
+                        <div class="link-row">
+                            <!-- <a href="https://arxiv.org/abs/2506.00188" class="text-link"><i class="fas fa-arrow-up-right-from-square"></i> arXiv</a> -->
+                            <a href="#" class="text-link"><i class="fab fa-github"></i> Code Coming Soon</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="experience" class="container">
+            <div class="experience-shell">
+                <p class="section-kicker">Career Path</p>
+                <h2 class="section-title">Experience</h2>
+                <div class="timeline">
+                    <article class="timeline-item">
+                        <div class="period">Aug 2023 - Present</div>
+                        <div>
+                            <h3>Graduate Research Assistant</h3>
+                            <p class="company">SISLab, University of South Florida</p>
+                            <p>Developing efficient deep learning architectures for time-series analysis, environmental monitoring, and intelligent transportation systems.</p>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="period">Dec 2019 - Jul 2023</div>
+                        <div>
+                            <h3>Protection Engineer</h3>
+                            <p class="company">Power Grid Bangladesh PLC</p>
+                            <p>Ensured grid stability through relay testing, control-system configuration, and fault analysis with practical Substation Automation Systems experience.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="awards" class="container">
+            <p class="section-kicker">Recognition</p>
+            <h2 class="section-title">Awards and Certificates</h2>
+            <div class="awards-grid">
+                <article class="card">
+                    <span class="tag">Global Winner ($10,000)</span>
+                    <div class="card-media">
+                        <img src="assets/M3_thumb.png" alt="DHS Hackathon award thumbnail">
+                    </div>
+                    <div class="card-body">
+                        <h3>1st Place: Managing Maritime Movements (M3) Hackathon</h3>
+                        <p>Global challenge hosted by the U.S. Department of Homeland Security. Built a hybrid Transformer-MLP-Mixer architecture to predict the route of the small vessels from the synthetic AIS data.</p>
+                        <div class="link-row">
+                            <a href="https://www.usf.edu/engineering/news/2025/yasin-yilmaz-scholargps-ranked-scholar-2025-story.aspx" target="_blank" rel="noopener noreferrer" class="text-link"><i class="fas fa-newspaper"></i> News</a>
+                            <a href="assets/M3_Presentation.pdf" target="_blank" rel="noopener noreferrer" class="text-link"><i class="fas fa-file-powerpoint"></i> Slides</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="publications" class="container">
+            <p class="section-kicker">Scholarly Work</p>
+            <h2 class="section-title">Selected Publications</h2>
+            <div class="publication-list">
+                <article class="publication">
+                    <div>
+                        <h3>WPMixer: Efficient Multi-Resolution Mixing for Long-Term Time Series Forecasting</h3>
+                        <p><strong>Murad, M. N.</strong>, et al. | AAAI 2025</p>
+                    </div>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/abs/2412.17176" class="pill-btn"><i class="fas fa-file-pdf"></i> Paper</a>
+                        <a href="https://github.com/Secure-and-Intelligent-Systems-Lab/WPMixer" class="pill-btn"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </article>
+
+                <article class="publication">
+                    <div>
+                        <h3>Multi-Resolution Mixer Network for Sensor Localization</h3>
+                        <p><strong>Murad, M. N.</strong>, et al. | IEEE WCNC 2025</p>
+                    </div>
+                    <div class="pub-links">
+                        <a href="https://ieeexplore.ieee.org/abstract/document/10978482" class="pill-btn"><i class="fas fa-file-pdf"></i> Paper</a>
+                        <a href="https://github.com/MNmurad/Multi-Resolution-Mixer-Network-for-Localization-of-Multiple-Sensors" class="pill-btn"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </article>
+
+                <article class="publication">
+                    <div>
+                        <h3>Camera-based Intruder Detection and Ship Monitoring</h3>
+                        <p><strong>Murad, M. N.</strong>, et al. | WACV 2025</p>
+                    </div>
+                    <div class="pub-links">
+                        <a href="https://openaccess.thecvf.com/content/WACV2025W/MaCVi/papers/Murad_Camera-based_Intruder_Detection_and_Monitoring_of_Ship_Crew_Work_Hours_WACVW_2025_paper.pdf" class="pill-btn"><i class="fas fa-file-pdf"></i> Paper</a>
+                        <a href="https://github.com/Secure-and-Intelligent-Systems-Lab/Intruder_Detection_and_Work_Hour_Estimation" class="pill-btn"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </article>
+
+                <article class="publication">
+                    <div>
+                        <h3>Cluster-Aware Causal Mixer for Online Anomaly Detection</h3>
+                        <p><strong>Murad, M. N.</strong>, et al. | Under Review</p>
+                    </div>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/abs/2506.00188" class="pill-btn"><i class="fas fa-file-pdf"></i> Paper</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-inner">
+            <p class="footer-note">(c) 2026 Md Mahmuddun Nabi Murad | Updated: March 2026</p>
+            <div class="social">
+                <a href="https://github.com/MNmurad" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/md-mahmuddun-nabi-murad/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:mmurad@usf.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
