@@ -18,6 +18,7 @@
                 <a href="#about">About</a>
                 <a href="#research">Research</a>
                 <a href="#experience">Experience</a>
+                <a href="#education">Education</a>
                 <a href="#awards">Awards</a>
                 <a href="#publications">Publications</a>
             </div>
@@ -65,41 +66,67 @@
                     </div>
                 </aside>
             </div>
+
+
         </section>
 
         <section id="research" class="container">
             <p class="section-kicker">Research and Publications</p>
             <h2 class="section-title">Flagship Projects</h2>
-            <div class="research-grid">
-                <article class="card">
-                    <a href="assets/WPMixer_AAAI25_Poster.pdf" target="_blank" class="card-media" title="View conference poster">
-                        <img src="assets/wpmixer-thumb.jpg" alt="WPMixer poster thumbnail">
-                        <span class="tag">AAAI 2025</span>
-                    </a>
-                    <div class="card-body">
-                        <h3>WPMixer: Efficient Multi-Resolution Mixing for Long-Term Time Series Forecasting</h3>
-                        <p>An MLP-mixer-based model that beats several Transformer variants in both forecasting quality and computational efficiency.</p>
-                        <div class="link-row">
-                            <a href="https://arxiv.org/abs/2412.17176" class="text-link"><i class="fas fa-arrow-up-right-from-square"></i> arXiv</a>
-                            <a href="https://github.com/Secure-and-Intelligent-Systems-Lab/WPMixer" class="text-link"><i class="fab fa-github"></i> Code</a>
-                        </div>
-                    </div>
-                </article>
+            <div class="carousel-container">
+                <div class="carousel-wrapper">
+                    <div class="research-grid carousel-track" id="carouselTrack">
+                        <article class="card">
+                            <a href="assets/ICML_CCM_TAD.png" target="_blank" class="card-media" title="View conference poster">
+                                <img src="assets/CCM_TAD.png" alt="CCM TAD poster thumbnail">
+                                <span class="tag">ICML 2026</span>
+                            </a>
+                            <div class="card-body">
+                                <h3>Cluster-Aware Causal Mixer for Online Anomaly Detection in Multivariate Time Series</h3>
+                                <p class="project-description" id="ccmDescription">We developed CCM-TAD to detect anomalies in multivariate time series. It groups sensors by how their readings relate to each other, so that unrelated sensors do not confuse the model's understanding of normal behavior. It also enforces a strict rule that each decision is based only on what has already been observed, with no information borrowed from the future. Rather than flagging each moment in isolation, it accumulates evidence over time to identify anomalies more reliably and to pinpoint exactly when they start and end.</p>
+                                <button class="read-more-btn" type="button" id="ccmToggle" aria-expanded="false" aria-controls="ccmDescription">Read more</button>
+                                <div class="link-row">
+                                    <a href="https://openreview.net/pdf?id=R6JV2WOftz" class="text-link"><i class="fas fa-arrow-up-right-from-square"></i> arXiv</a>
+                                    <a href="https://github.com/Secure-and-Intelligent-Systems-Lab/CCM-TAD" class="text-link"><i class="fab fa-github"></i> Code</a>
+                                </div>
+                            </div>
+                        </article>
 
-                <article class="card">
-                    <a href="https://www.youtube.com/watch?v=CgXx3Pa-xzY" target="_blank" class="card-media" title="Watch project demo">
-                        <img src="https://img.youtube.com/vi/CgXx3Pa-xzY/maxresdefault.jpg" alt="Causal MLP-Mixer video thumbnail">
-                        <span class="tag">Research Project</span>
-                    </a>
-                    <div class="card-body">
-                        <h3>Vessel Route Prediction using Web-stream Video of a Maritime Environment</h3>
-                        <p>We develop a novel model that can predict vessel routes using both AIS and non-AIS data. Non-AIS data is obtained from web-stream video feeds of maritime environments.</p>
-                        <div class="link-row">
-                            <!-- <a href="https://arxiv.org/abs/2506.00188" class="text-link"><i class="fas fa-arrow-up-right-from-square"></i> arXiv</a> -->
-                            <a href="#" class="text-link"><i class="fab fa-github"></i> Code Coming Soon</a>
-                        </div>
-                    </div>
-                </article>
+                        <article class="card">
+                            <a href="assets/WPMixer_AAAI25_Poster.pdf" target="_blank" class="card-media" title="View conference poster">
+                                <img src="assets/wpmixer-thumb.jpg" alt="WPMixer poster thumbnail">
+                                <span class="tag">AAAI 2025</span>
+                            </a>
+                            <div class="card-body">
+                                <h3>WPMixer: Efficient Multi-Resolution Mixing for Long-Term Time Series Forecasting</h3>
+                                <p>An MLP-mixer-based model that beats several Transformer variants in both forecasting quality and computational efficiency.</p>
+                                <div class="link-row">
+                                    <a href="https://arxiv.org/abs/2412.17176" class="text-link"><i class="fas fa-arrow-up-right-from-square"></i> arXiv</a>
+                                    <a href="https://github.com/Secure-and-Intelligent-Systems-Lab/WPMixer" class="text-link"><i class="fab fa-github"></i> Code</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <a href="https://www.youtube.com/watch?v=CgXx3Pa-xzY" target="_blank" class="card-media" title="Watch project demo">
+                                <img src="https://img.youtube.com/vi/CgXx3Pa-xzY/maxresdefault.jpg" alt="Causal MLP-Mixer video thumbnail">
+                                <span class="tag">Research Project</span>
+                            </a>
+                            <div class="card-body">
+                                <h3>Vessel Route Prediction using Web-stream Video of a Maritime Environment</h3>
+                                <p>We develop a novel model that can predict vessel routes using both AIS and non-AIS data. Non-AIS data is obtained from web-stream video feeds of maritime environments.</p>
+                                <div class="link-row">
+                                    <a href="#" class="text-link"><i class="fab fa-github"></i> Code: will be available soon</a>
+                                </div>
+                            </div>
+                        </article>
+
+                </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn carousel-btn-back" id="backBtn" aria-label="View previous projects"><i class="fas fa-chevron-left"></i></button>
+                    <button class="carousel-btn carousel-btn-next" id="moreBtn" aria-label="View more projects"><i class="fas fa-chevron-right"></i></button>
+                </div>
             </div>
         </section>
 
@@ -108,6 +135,15 @@
                 <p class="section-kicker">Career Path</p>
                 <h2 class="section-title">Experience</h2>
                 <div class="timeline">
+                    <article class="timeline-item">
+                        <div class="period">June 2026 - Aug 2026</div>
+                        <div>
+                            <h3>Time Series Machine Learning Intern</h3>
+                            <p class="company">Schneider Electric, Andover, MA</p>
+                            <p>Developing a global model to detect anomalies in the UPS (Uninterrupted Power Supply).</p>
+                        </div>
+                    </article>
+
                     <article class="timeline-item">
                         <div class="period">Aug 2023 - Present</div>
                         <div>
@@ -129,41 +165,92 @@
             </div>
         </section>
 
-        <section id="awards" class="container">
-            <p class="section-kicker">Recognition</p>
-            <h2 class="section-title">Awards and Certificates</h2>
-            <div class="awards-grid">
-                <article class="card">
-                    <span class="tag">Global Winner ($10,000)</span>
-                    <div class="card-media">
-                        <img src="assets/M3_thumb.png" alt="DHS Hackathon award thumbnail">
-                    </div>
-                    <div class="card-body">
-                        <h3>1st Place: Managing Maritime Movements (M3) Hackathon</h3>
-                        <p>Global challenge hosted by the U.S. Department of Homeland Security. Built a hybrid Transformer-MLP-Mixer architecture to predict the route of the small vessels from the synthetic AIS data.</p>
-                        <div class="link-row">
-                            <a href="https://www.usf.edu/engineering/news/2025/yasin-yilmaz-scholargps-ranked-scholar-2025-story.aspx" target="_blank" rel="noopener noreferrer" class="text-link"><i class="fas fa-newspaper"></i> News</a>
-                            <a href="assets/M3_Presentation.pdf" target="_blank" rel="noopener noreferrer" class="text-link"><i class="fas fa-file-powerpoint"></i> Slides</a>
+        <section id="education" class="container">
+            <div class="education-shell">
+                <p class="section-kicker">Academic Background</p>
+                <h2 class="section-title">Education</h2>
+                <div class="timeline">
+                    <article class="timeline-item">
+                        <div class="period">Aug 2023 - Present</div>
+                        <div>
+                            <h3>Ph.D. in Electrical Engineering</h3>
+                            <p class="company">University of South Florida, Tampa, FL, USA</p>
+                            <p><strong>Track:</strong> Machine Learning & AI</p>
+                            <p><strong>GPA:</strong> 4.0/4.0</p>
                         </div>
-                    </div>
-                </article>
+                    </article>
 
-                <article class="card">
-                    <span class="tag">Certificate of Participation</span>
-                    <a href="assets/Siemens_certificate.pdf" target="_blank" class="card-media" title="View Certificate of Participation">
-                        <img src="assets/Siemens_certificate_thumb.png" alt="Siemens certificate thumbnail">
-                        <span class="tag">Certificate of Participation</span>
-                    </a>
-                    <div class="card-body">
-                        <h3>SIEMENS Protection Training</h3>
-                        <p>Participated in a comprehensive training program on power system protection in <strong>SIEMENS Power Academy at Germany</strong>. Gaining hands-on experience with Siemens protection relays and control systems, especially
-                            DIGSI, 7SA6, 7SA8, 7UT6, 7UT8, and 7SS85.
-                        </p>
-                        <div class="link-row">
-                            <a href="assets/Siemens_certificate.pdf" target="_blank" rel="noopener noreferrer" class="text-link"><i class="fas fa-file-pdf"></i> Certificate</a>
+                    <article class="timeline-item">
+                        <div class="period">Aug 2023 - May 2026</div>
+                        <div>
+                            <h3>M.Sc. in Electrical Engineering</h3>
+                            <p class="company">University of South Florida, Tampa, FL, USA</p>
+                            <p><strong>Track:</strong> Machine Learning & AI</p>
+                            <p><strong>CGPA:</strong> 4.0/4.0</p>
                         </div>
-                    </div>
-                </article>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="period">Feb 2015 - Apr 2019</div>
+                        <div>
+                            <h3>B.Sc. in Electrical and Electronic Engineering</h3>
+                            <p class="company">Bangladesh University of Engineering and Technology (BUET), Dhaka, Bangladesh</p>
+                            <p><strong>Major:</strong> Signal Processing</p>
+                            <p><strong>CGPA:</strong> 3.67/4.0</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="awards" class="container">
+            <div class="awards-shell">
+                <p class="section-kicker">Recognition</p>
+                <h2 class="section-title">Awards and Certificates</h2>
+                <div class="timeline">
+                    <article class="timeline-item">
+                        <div class="period">
+                            <div>May 2026</div>
+                            <span class="badge">GOLD</span>
+                        </div>
+                        <div>
+                            <h3>Recognized as a Gold Reviewer, placing among the top reviewers in ICML 2026</h3>
+                            <p class="company">ICML 2026</p>
+                            <p>Served as a reviewer for the ICML 2026 conference. Reviewed six papers in time series forecasting domain. Based on the quality of reviews, received recognition for outstanding contributions.</p>
+                            <div class="link-row">
+                                <a href="assets/Gold_Reviewer_ICML_2026.pdf" target="_blank" rel="noopener noreferrer" class="text-link"><i class="fas fa-file-pdf"></i> Certificate</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="period">
+                            <div>Nov 2024</div>
+                            <span class="badge">Winner</span>
+                        </div>
+                        <div>
+                            <h3>1st Place: Managing Maritime Movements (M3) Hackathon</h3>
+                            <p class="company">Global Challenge | DHS ($10,000)</p>
+                            <p>Global challenge hosted by the U.S. Department of Homeland Security. Built a hybrid Transformer-MLP-Mixer architecture to predict the route of the small vessels from the synthetic AIS data.</p>
+                            <div class="link-row">
+                                <a href="https://www.usf.edu/engineering/news/2025/yasin-yilmaz-scholargps-ranked-scholar-2025-story.aspx" target="_blank" rel="noopener noreferrer" class="text-link"><i class="fas fa-newspaper"></i> News</a>
+                                <a href="assets/M3_Presentation.pdf" target="_blank" rel="noopener noreferrer" class="text-link"><i class="fas fa-file-powerpoint"></i> Slides</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="period"><span class="badge">Training</span></div>
+                        <div>
+                            <h3>SIEMENS Protection Training</h3>
+                            <p class="company">SIEMENS Power Academy | Germany</p>
+                            <p>Participated in a comprehensive training program on power system protection. Gained hands-on experience with Siemens protection relays and control systems, especially DIGSI, 7SA6, 7SA8, 7UT6, 7UT8, and 7SS85.</p>
+                            <div class="link-row">
+                                <a href="assets/Siemens_certificate.pdf" target="_blank" rel="noopener noreferrer" class="text-link"><i class="fas fa-file-pdf"></i> Certificate</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
 
@@ -171,6 +258,17 @@
             <p class="section-kicker">Scholarly Work</p>
             <h2 class="section-title">Selected Publications</h2>
             <div class="publication-list">
+                <article class="publication">
+                    <div>
+                        <h3>Cluster-Aware Causal Mixer for Online Anomaly Detection in Multivariate Time Series</h3>
+                        <p><strong>Murad, M. N.</strong>, et al. | ICML 2026</p>
+                    </div>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/abs/2506.00188" class="pill-btn"><i class="fas fa-file-pdf"></i> Paper</a>
+                        <a href="https://github.com/Secure-and-Intelligent-Systems-Lab/CCM-TAD" class="pill-btn"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </article>
+
                 <article class="publication">
                     <div>
                         <h3>WPMixer: Efficient Multi-Resolution Mixing for Long-Term Time Series Forecasting</h3>
@@ -204,22 +302,13 @@
                     </div>
                 </article>
 
-                <article class="publication">
-                    <div>
-                        <h3>Cluster-Aware Causal Mixer for Online Anomaly Detection</h3>
-                        <p><strong>Murad, M. N.</strong>, et al. | Under Review</p>
-                    </div>
-                    <div class="pub-links">
-                        <a href="https://arxiv.org/abs/2506.00188" class="pill-btn"><i class="fas fa-file-pdf"></i> Paper</a>
-                    </div>
-                </article>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container footer-inner">
-            <p class="footer-note">(c) 2026 Md Mahmuddun Nabi Murad | Updated: March 2026</p>
+            <p class="footer-note">(c) 2026 Md Mahmuddun Nabi Murad | Updated: August 2026</p>
             <div class="social">
                 <a href="https://github.com/MNmurad" aria-label="GitHub"><i class="fab fa-github"></i></a>
                 <a href="https://linkedin.com/in/md-mahmuddun-nabi-murad/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
@@ -227,10 +316,75 @@
             </div>
         </div>
     </footer>
+    <script>
+        // Navigation scroll detection
+        const navLinks = document.querySelectorAll('.nav-links a');
+        const sections = document.querySelectorAll('section[id]');
 
-    <!-- Private analytics only: stats are visible in your GoatCounter dashboard, not on this page. -->
-    <script data-goatcounter="https://mnmurad.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js">
+        const observerOptions = {
+            root: null,
+            rootMargin: '-50% 0px -50% 0px',
+            threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(link => link.classList.remove('active'));
+                    const activeLink = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
+                    if (activeLink) activeLink.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => observer.observe(section));
+
+        // Carousel functionality
+        const carouselTrack = document.getElementById('carouselTrack');
+        const moreBtn = document.getElementById('moreBtn');
+        const backBtn = document.getElementById('backBtn');
+        const cards = carouselTrack.querySelectorAll('.card');
+        const ccmToggle = document.getElementById('ccmToggle');
+        const ccmDescription = document.getElementById('ccmDescription');
+        let currentIndex = 0;
+        const cardsPerView = 2;
+        const totalCards = cards.length;
+
+        function updateCarousel() {
+            const cardWidth = carouselTrack.parentElement.offsetWidth / cardsPerView;
+            const offset = -currentIndex * cardWidth;
+            carouselTrack.style.transform = `translateX(${offset}px)`;
+            
+            // Disable/enable buttons based on position
+            backBtn.disabled = currentIndex === 0;
+            moreBtn.disabled = currentIndex >= totalCards - cardsPerView;
+        }
+
+        backBtn.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateCarousel();
+            }
+        });
+
+        moreBtn.addEventListener('click', () => {
+            if (currentIndex < totalCards - cardsPerView) {
+                currentIndex++;
+                updateCarousel();
+            }
+        });
+
+        if (ccmToggle && ccmDescription) {
+            ccmToggle.addEventListener('click', () => {
+                const isExpanded = ccmDescription.classList.toggle('is-expanded');
+                ccmToggle.textContent = isExpanded ? 'Show less' : 'Read more';
+                ccmToggle.setAttribute('aria-expanded', String(isExpanded));
+            });
+        }
+
+        // Initialize
+        updateCarousel();
+        window.addEventListener('resize', updateCarousel);
     </script>
 </body>
 </html>
