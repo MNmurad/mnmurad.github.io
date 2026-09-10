@@ -23,6 +23,9 @@
                 <a href="#awards">Awards</a>
                 <a href="#publications">Publications</a>
             </div>
+            <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch to dark theme">
+                <i class="fas fa-moon"></i>
+            </button>
         </div>
     </nav>
 
@@ -35,7 +38,7 @@
                 <p>I build practical deep learning systems for long-horizon time-series forecasting, anomaly detection, and intelligent infrastructure with a focus on efficient model design.</p>
                 <div class="hero-actions">
                     <a href="assets/Murad_CV.pdf" target="_blank" class="btn btn-primary"><i class="fas fa-file-pdf"></i> View CV</a>
-                    <a href="#research" class="btn btn-ghost"><i class="fas fa-microscope"></i> Explore Research</a>
+                    <!-- <a href="#research" class="btn btn-ghost"><i class="fas fa-microscope"></i> Explore Research</a> -->
                 </div>
                 <div class="social">
                     <a href="mailto:mmurad@usf.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
@@ -293,7 +296,7 @@
                             <p class="company">ICML 2026</p>
                             <p>Served as a reviewer for the ICML 2026 conference. Reviewed six papers in time series forecasting domain. Based on the quality of reviews, received recognition for outstanding contributions.</p>
                             <div class="link-row">
-                                <a href="assets/Gold_Reviewer_ICML_2026.pdf" target="_blank" rel="noopener noreferrer" class="text-link"><i class="fas fa-file-pdf"></i> Certificate</a>
+                                <a href="assets/GOLD_REVIEWER_ICML_2026.pdf" target="_blank" rel="noopener noreferrer" class="text-link"><i class="fas fa-file-pdf"></i> Certificate</a>
                             </div>
                         </div>
                     </article>
@@ -434,6 +437,22 @@
                 newsToggle.setAttribute('aria-expanded', String(!isCollapsed));
             });
         }
+
+        // Theme toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const rootEl = document.documentElement;
+        function applyTheme(theme) {
+            rootEl.setAttribute('data-theme', theme);
+            themeToggle.innerHTML = theme === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+            themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+        }
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        applyTheme(savedTheme);
+        themeToggle.addEventListener('click', () => {
+            const newTheme = rootEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            localStorage.setItem('theme', newTheme);
+            applyTheme(newTheme);
+        });
 
         // Initialize
         updateCarousel();
